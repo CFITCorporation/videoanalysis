@@ -111,7 +111,7 @@ window.location.search="?url="+encodeURI(k);
 }
 $.get("https://api.iyk0.com/qsy/?url="+encodeURI(k),function (data) { 
 var k=data;
-document.getElementById('ar').src=k.url;
+document.getElementById('ar').href=k.url;
 document.getElementById('au').src=k.cover;
 document.getElementById('audi').innerHTML="或者复制以下链接访问↓ <br>";
 document.getElementById('aud').value=k.url;
@@ -141,7 +141,7 @@ window.location.search="?url="+encodeURI(k);
 }
 $.get("https://api.iyk0.com/qsy/?url="+encodeURI(k),function (data) { 
 var k=data;
-document.getElementById('ar').src=k.url;
+document.getElementById('ar').href=k.url;
 document.getElementById('au').src=k.cover;
 document.getElementById('audi').innerHTML="或者复制以下链接访问↓ <br>";
 document.getElementById('aud').value=k.url;
