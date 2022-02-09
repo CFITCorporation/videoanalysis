@@ -1,0 +1,185 @@
+﻿
+<!doctype html>
+<html>
+<head>
+<script src="https://eqcn.ajz.miesnfu.com/wp-content/plugins/wp-3d-pony/live2dw/lib/L2Dwidget.min.js"></script>
+<script>
+	L2Dwidget.init({ 
+		"model": { "jsonPath":"https://unpkg.com/live2d-widget-model-shizuku@1.0.5/assets/shizuku.model.json", "scale": 1, "hHeadPos":0.5, "vHeadPos":0.618 },
+		"display": { "position": "right", "width": 200, "height": 400, "hOffset": 0, "vOffset": 0 }, 
+		"mobile": { "show": true, "scale": 0.5 },
+		"react": { "opacityDefault": 0.6, "opacityOnHover": 0.2 } 
+		});
+</script>
+<meta name="referrer" content="no-referrer">
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0'>
+<meta name='apple-mobile-web-app-capable' content='yes'>
+<meta name='apple-mobile-web-app-status-bar-style' content='black'>
+<meta name='format-detection' content='telephone=no'>
+<link rel="stylesheet" href="img.css" type="text/css" />
+
+<style type="text/css">
+.style16 {
+				font-family: 华文中宋;
+				font-size: 24pt;
+				font-weight: bold;
+				color: #0066FF;
+}
+.style19 {
+				font-family: Algerian;
+}
+.style20 {
+				font-family: 华文新魏;
+}
+.style21 {
+				font-size: medium;
+}
+.style22 {
+				color: #0000FF;
+}
+.style23 {
+				margin-bottom: 0px;
+}
+.style24 {
+				font-family: 华文中宋;
+				font-weight: bold;
+				color: #0066FF;
+}
+</style>
+<link rel="stylesheet" href="img.css" type="text/css" />
+</head>
+
+<p>&nbsp;<a href="../../Views.htm" class="style3"><img src="Asia.ico" width="46" height="45"> 
+</a><span class="style16">&nbsp;视频解析</span></p>
+
+<hr>
+<div class="css1">
+				
+
+				<input name="Text1" type="text" style="width: 100%" id="tex" placeholder="请输入视频平台分享链接，例如：https://v.douyin.com/8Kb2q8b/ https://www.bilibili.com/video/av170001"></div>
+				<label id="Label1" style="width: 100%">
+				<input name="Button1" type="button" value="转换" id="d" style="width: 81px; height: 28px; float: right"><center>
+<span class="style19"><span class="style20"><span class="style21">
+<span class="style22">
+</span></span></span></span></center></label><br>
+     
+		
+
+<hr class="style23">
+<span class="style24">
+<label>点击图片直接下载视频</label></span>
+<a href="" id="ar">
+<img id="au" style="width: 100%"></a><br>
+<div class="css1">
+<span class="style24"><label id="audi"></label></span>
+
+<input name="Text2" id="aud" type="text" style="width: 100%">
+<span class="style24"><label id="a"></label></span>
+
+</div>
+<br>
+<a href="" id="vi"><span class="style24"><label id="a1"></label></span></a>
+<hr class="style23">
+<hr>
+<!--audio id="av" style="width: 100%"></audio><br><label id="avi" controls="controls"></label><br>
+<a href="" id="vi2"><label id="a2"></label></a-->
+&nbsp;<br>
+<hr>
+<center>
+</center>
+</html>
+<script src="jquery.js"></script>
+<script type="text/javascript">
+
+var k=window.location.search;
+if(k!=""){
+   document.getElementById("tex").value=k.split("=")[1];}
+
+/*$.ajax({
+  method: 'GET',
+  url: window.location.href,
+})
+  .done(function(msg) {
+  alert(msg);
+   document.getElementById("tex").value=msg.url;
+  });*/
+</script>
+
+<script type="text/javascript">
+var k=document.getElementById("tex").value;
+k=k.replace(/\ /g,"");
+k=k.replace(/\+/g,"");
+if(k==""){
+//alert('不填内容的你是屑(｀0´)');
+}
+else{
+if(window.location.search=="")
+{
+window.location.search="?url="+encodeURI(k);
+}
+$.get("https://api.iyk0.com/qsy/?url="+encodeURI(k),function (data) { 
+var k=data;
+document.getElementById('au').src=k.cover;
+document.getElementById('audi').innerHTML="若视频无法播放，请复制 <br>";
+document.getElementById('aud').value=k.url;
+document.getElementById('a').innerHTML=" <br>访问；";//+"<span class='style14'></span>";
+document.getElementById('vi').href=k.url;
+document.getElementById('ar').href=k.url;
+console.log(k.url.includes("platform&mid=0"));
+//platform&mid=0
+if(k.url.includes("platform&mid=0")==true)
+{
+
+location.reload();}
+//document.getElementById('a1').innerHTML="或者点击这里";
+
+
+//document.getElementById('av').src=k.mp3;
+//document.getElementById('avi').innerHTML="若音频无法播放，请复制 "+k.mp3+" 访问；";
+//document.getElementById('vi2').href=k.mp3;
+//document.getElementById('a2').innerHTML="或者点击这里";
+
+//zTreeObj = $.fn.zTree.init($("#menuTree"), setting, data);
+ }) //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes); //ztree加载 // var nodes = zTreeObj.getNodes()[0].children; 
+ 
+
+}
+
+$("#d").click(function () {
+var k=document.getElementById("tex").value;
+k=k.replace(/\ /g,"");
+k=k.replace(/\+/g,"");
+if(k==""){
+alert('不填内容的你是屑(｀0´)');
+}
+else{
+if(window.location.search=="")
+{
+window.location.search="?url="+encodeURI(k);
+}
+$.get("https://api.iyk0.com/qsy/?url="+encodeURI(k),function (data) { 
+var k=data;
+document.getElementById('au').src=k.url;
+document.getElementById('audi').innerHTML="若视频无法播放，请复制 <br>";
+document.getElementById('aud').value=k.url;
+document.getElementById('a').innerHTML=" <br>访问；";//+"<span class='style14'></span>";
+document.getElementById('vi').href=k.url;
+document.getElementById('a1').innerHTML="或者点击这里";
+
+if(k.url.includes("platform&mid=0")==true)
+{
+
+location.reload();}
+
+//document.getElementById('av').src=k.mp3;
+//document.getElementById('avi').innerHTML="若音频无法播放，请复制 "+k.mp3+" 访问；";
+//document.getElementById('vi2').href=k.mp3;
+//document.getElementById('a2').innerHTML="或者点击这里";
+
+//zTreeObj = $.fn.zTree.init($("#menuTree"), setting, data);
+ }) //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes); //ztree加载 // var nodes = zTreeObj.getNodes()[0].children; 
+ 
+
+}
+})
+</script>
