@@ -15,4 +15,4 @@
 如果解析失败，请注意：  
 ·您复制的链接是否属于以上所述平台中；  
 ·如果短链接无法解析请将其还原；  
-·B站链接https://m.bilibili.com......改为https://www.bilibili.com......可以提高解析成功率。  
+·B站链接https://m.bilibili.com 改为 https://www.bilibili.com 可以提高解析成功率。  
