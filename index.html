@@ -67,7 +67,7 @@
 
 <hr class="style23">
 <span class="style24">
-<label>点击图片直接下载视频</label></span>
+<label id="clk"></label></span>
 <a href="" id="ar">
 <img id="au" style="width: 100%"></a><br>
 <div class="css1">
@@ -101,7 +101,6 @@ var k=document.getElementById("tex").value;
 k=k.replace(/\ /g,"");
 k=k.replace(/\+/g,"");
 if(k==""){
-//alert('不填内容的你是屑(｀0´)');
 }
 else{
 if(window.location.search=="")
@@ -115,13 +114,13 @@ document.getElementById('audi').innerHTML="若视频无法播放，请复制以�
 document.getElementById('aud').value=k.url;
 document.getElementById('vi').href=k.url;
 document.getElementById('a1').innerHTML="或者点击这里";
+document.getElementById('clk').innerHTML="点击图片直接下载视频↓";
 if(k.url.includes("platform&mid=0")==true)
 {
 
 location.reload();}
 
-//zTreeObj = $.fn.zTree.init($("#menuTree"), setting, data);
- }) //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes); //ztree加载 // var nodes = zTreeObj.getNodes()[0].children; 
+ }) 
  
 
 }
@@ -145,16 +144,13 @@ document.getElementById('audi').innerHTML="若视频无法播放，请复制以�
 document.getElementById('aud').value=k.url;
 document.getElementById('vi').href=k.url;
 document.getElementById('a1').innerHTML="或者点击这里";
-
+document.getElementById('clk').innerHTML="点击图片直接下载视频↓";
 if(k.url.includes("platform&mid=0")==true)
 {
 
 location.reload();}
 
-
-
-//zTreeObj = $.fn.zTree.init($("#menuTree"), setting, data);
- }) //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes); //ztree加载 // var nodes = zTreeObj.getNodes()[0].children; 
+ }) 
  
 
 }
