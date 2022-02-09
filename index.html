@@ -105,7 +105,7 @@ k=k.replace(/\+/g,"");
 if(k==""){
 }
 else{
-if(window.location.search=="")
+if(window.location.search==""||window.location.search!="?url="+encodeURI(k))
 {
 window.location.search="?url="+encodeURI(k);
 }
@@ -135,7 +135,7 @@ if(k==""){
 alert('不填内容的你是屑(｀0´)');
 }
 else{
-if(window.location.search=="")
+if(window.location.search==""||window.location.search!="?url="+encodeURI(k))
 {
 window.location.search="?url="+encodeURI(k);
 }
