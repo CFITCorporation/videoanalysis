@@ -10,7 +10,7 @@
 ·结果出来时，点击图片直接下载视频。  
 2 >  
 ·在分享链接前加入 https://cfitcorporation.github.io/videoanalysis/?url=  进行解析；  
-·（例：https://cfitcorporation.github.io/videoanalysis/?url=https://www.bilibili.com/video/av170001/）。   
+·（例：https://cfitcorporation.github.io/videoanalysis/?url=https://www.bilibili.com/video/av170001/ ）。   
 【提醒】  
 如果解析失败，请注意：  
 ·您复制的链接是否属于以上所述平台中；  
