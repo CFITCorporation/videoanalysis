@@ -94,15 +94,6 @@
 var k=window.location.search;
 if(k!=""){
    document.getElementById("tex").value=k.split("=")[1];}
-
-/*$.ajax({
-  method: 'GET',
-  url: window.location.href,
-})
-  .done(function(msg) {
-  alert(msg);
-   document.getElementById("tex").value=msg.url;
-  });*/
 </script>
 
 <script type="text/javascript">
@@ -119,25 +110,15 @@ window.location.search="?url="+encodeURI(k);
 }
 $.get("https://api.iyk0.com/qsy/?url="+encodeURI(k),function (data) { 
 var k=data;
-document.getElementById('au').src=k.cover;
-document.getElementById('audi').innerHTML="若视频无法播放，请复制 <br>";
+document.getElementById('au').src=k.url;
+document.getElementById('audi').innerHTML="若视频无法播放，请复制以下链接访问↓ <br>";
 document.getElementById('aud').value=k.url;
-document.getElementById('a').innerHTML=" <br>访问；";//+"<span class='style14'></span>";
 document.getElementById('vi').href=k.url;
-document.getElementById('ar').href=k.url;
-console.log(k.url.includes("platform&mid=0"));
-//platform&mid=0
+document.getElementById('a1').innerHTML="或者点击这里";
 if(k.url.includes("platform&mid=0")==true)
 {
 
 location.reload();}
-//document.getElementById('a1').innerHTML="或者点击这里";
-
-
-//document.getElementById('av').src=k.mp3;
-//document.getElementById('avi').innerHTML="若音频无法播放，请复制 "+k.mp3+" 访问；";
-//document.getElementById('vi2').href=k.mp3;
-//document.getElementById('a2').innerHTML="或者点击这里";
 
 //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, data);
  }) //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes); //ztree加载 // var nodes = zTreeObj.getNodes()[0].children; 
@@ -160,9 +141,8 @@ window.location.search="?url="+encodeURI(k);
 $.get("https://api.iyk0.com/qsy/?url="+encodeURI(k),function (data) { 
 var k=data;
 document.getElementById('au').src=k.url;
-document.getElementById('audi').innerHTML="若视频无法播放，请复制 <br>";
+document.getElementById('audi').innerHTML="若视频无法播放，请复制以下链接访问↓ <br>";
 document.getElementById('aud').value=k.url;
-document.getElementById('a').innerHTML=" <br>访问；";//+"<span class='style14'></span>";
 document.getElementById('vi').href=k.url;
 document.getElementById('a1').innerHTML="或者点击这里";
 
@@ -171,10 +151,7 @@ if(k.url.includes("platform&mid=0")==true)
 
 location.reload();}
 
-//document.getElementById('av').src=k.mp3;
-//document.getElementById('avi').innerHTML="若音频无法播放，请复制 "+k.mp3+" 访问；";
-//document.getElementById('vi2').href=k.mp3;
-//document.getElementById('a2').innerHTML="或者点击这里";
+
 
 //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, data);
  }) //zTreeObj = $.fn.zTree.init($("#menuTree"), setting, zNodes); //ztree加载 // var nodes = zTreeObj.getNodes()[0].children; 
